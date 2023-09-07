@@ -1,5 +1,5 @@
 from flask import Flask, render_template_string
-
+from flask_cors import CORS
 import warnings
 # Filter out the specific warning message
 warnings.filterwarnings("ignore", message="loaded more than 1 DLL from .libs")
@@ -14,6 +14,7 @@ import os
 
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for the entire app
 
 
 
